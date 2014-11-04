@@ -59,9 +59,11 @@ def evaluate(inputPath, outputPath, rulesPath):
 def usage():
     print("""
 Please use the following options:
-    -e  --endpoint  Specify the SPARQL service URL to use for query execution (excludes --file)
-    -f  --file      Specify the local RDF model to use for query execution (excludes --endpoint)
-    -q  --query     Specify the SPARQL query string to execute
+    -i  --input     The input model on which the rules will be executed
+    -o  --output    The path to where the output will be written
+    -r  --rules     The file containing the rule to execute
+
+    Currently only one rule can be executed at a time. For executing multiple rules please run this script multiple times.
 """)
 
 if __name__ == "__main__":
